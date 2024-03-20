@@ -1,5 +1,5 @@
-import { useDispatch, useSelector } from 'react-redux';
-import { useEffect } from 'react';
+// import { useDispatch, useSelector } from 'react-redux';
+// import { useEffect } from 'react';
 
 export const Sidebar = () => {
   // const farms = useSelector(selectFarm);
