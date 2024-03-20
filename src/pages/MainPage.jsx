@@ -6,12 +6,14 @@ import React from 'react';
 const MainPage = () => {
   return (
     <Container>
-      <aside>
+      <aside className="sidebar-section">
         <Sidebar />
       </aside>
-      <section className="main-section">
-        <p>Main Container</p>
-      </section>
+      <main>
+        <section className="main-section">
+          <div>Main Container</div>
+        </section>
+      </main>
     </Container>
   );
 };

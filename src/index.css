@@ -1,32 +1,100 @@
 @import-normalize; /* bring in normalize.css styles */
 
+/* .inter-<uniquifier> {
+  font-weight: <weight>;
+  font-style: normal;
+} */
+
+:root {
+  --button: #e44848;
+  --main: #101828;
+  --inputs: #f7f7f7;
+  --block-features: #f2f4f7;
+  --rating: #ffc531;
+  --text: #475467;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Inter', sans-serif;
+  font-optical-sizing: auto;
+  font-variation-settings: 'slnt' 0;
+  font-weight: 500;
+  font-size: 16px;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: currentColor;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 aside {
-  width: 40%;
-  padding-left: 0.5rem;
-  margin-left: 0.5rem;
+  width: 360px;
+  padding-left: 64px;
+  padding-right: 64px;
   float: left;
   font-style: italic;
   color: #29627e;
+
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  /* height: 100%;
+  width: 360px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  padding-top: 20px; */
+}
+
+main {
+  margin-left: 360px; /* Same as the width of the sidenav */
+  padding: 0px 10px;
 }
 
 .container {
-  width: 90%;
-  align-content: center;
+  width: 1440px;
+  /* align-content: center; */
   /* height: 100vh; */
+  /* display: ; */
+  margin-top: 18px;
 }
 
 /* _______________________________________SideBAR */
@@ -34,4 +102,63 @@ aside {
 .location {
   display: flex;
   flex-direction: column;
+}
+
+.location-input {
+  border-radius: 10px;
+  padding: 18px 18px 18px 18px;
+  /* width: 100%; */
+  height: 20px;
+  background: var(--inputs);
+}
+
+.location-label {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  color: rgba(16, 24, 40, 0.6);
+}
+
+.filter-label {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  color: rgba(16, 24, 40, 0.6);
+  padding-bottom: 16px;
+}
+.filter-name {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 120%;
+  color: var(--main);
+  padding-bottom: 16px;
+}
+.filter-group {
+  margin-top: 24px;
+  display: flex;
+  gap: 8px;
+}
+.filter-item {
+  border: 1px solid rgba(16, 24, 40, 0.2);
+  border-radius: 10px;
+  padding: 17px 27px;
+  width: 113px;
+  height: 95px;
+}
+
+.filter-item :hover {
+  border: 1px solid var(--button);
+}
+.filter-button {
+  border-radius: 200px;
+  /* padding: 16px; */
+  width: 173px;
+  height: 56px;
+  background: var(--button);
+  text-align: center;
+
+  color: #fff;
 }

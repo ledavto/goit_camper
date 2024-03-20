@@ -1,11 +1,5 @@
-import ListProduct from '../ProductList';
-
 const MainInner = () => {
-  return (
-    <div className="section-products">
-      <ListProduct />
-    </div>
-  );
+  return <div className="section-products"></div>;
 };
 
 export default MainInner;
