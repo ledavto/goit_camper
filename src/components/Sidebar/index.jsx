@@ -1,6 +1,8 @@
 // import { useDispatch, useSelector } from 'react-redux';
 // import { useEffect } from 'react';
 
+import { Location } from './Location';
+
 export const Sidebar = () => {
   // const farms = useSelector(selectFarm);
 
@@ -12,7 +14,7 @@ export const Sidebar = () => {
 
   return (
     <div className="sidebar-section">
-      <p>SideBar</p>
+      <Location />
     </div>
   );
 };

@@ -18,8 +18,20 @@ aside {
   width: 40%;
   padding-left: 0.5rem;
   margin-left: 0.5rem;
-  float: right;
-  box-shadow: inset 5px 0 5px -5px #29627e;
+  float: left;
   font-style: italic;
   color: #29627e;
+}
+
+.container {
+  width: 90%;
+  align-content: center;
+  /* height: 100vh; */
+}
+
+/* _______________________________________SideBAR */
+
+.location {
+  display: flex;
+  flex-direction: column;
 }

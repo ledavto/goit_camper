@@ -1,8 +1,8 @@
 {
-  "name": "react-homework-template",
+  "name": "goit_camper",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://goitacademy.github.io/react-homework-template/",
+  "homepage": "https://ledavto.github.io/goit_camper/",
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.1",
     "axios": "^1.6.7",
