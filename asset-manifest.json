@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/goit_camper/static/css/main.0c1a6c3c.css",
-    "main.js": "/goit_camper/static/js/main.4a798e33.js",
+    "main.css": "/goit_camper/static/css/main.c074ff64.css",
+    "main.js": "/goit_camper/static/js/main.4d26c68f.js",
     "index.html": "/goit_camper/index.html",
-    "main.0c1a6c3c.css.map": "/goit_camper/static/css/main.0c1a6c3c.css.map",
-    "main.4a798e33.js.map": "/goit_camper/static/js/main.4a798e33.js.map"
+    "main.c074ff64.css.map": "/goit_camper/static/css/main.c074ff64.css.map",
+    "main.4d26c68f.js.map": "/goit_camper/static/js/main.4d26c68f.js.map"
   },
   "entrypoints": [
-    "static/css/main.0c1a6c3c.css",
-    "static/js/main.4a798e33.js"
+    "static/css/main.c074ff64.css",
+    "static/js/main.4d26c68f.js"
   ]
 }
