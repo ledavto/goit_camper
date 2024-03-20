@@ -1,3 +1,4 @@
+import MainPage from 'pages/MainPage';
 import { Route, Routes } from 'react-router-dom';
 
 export const App = () => {
@@ -5,7 +6,7 @@ export const App = () => {
     <div>
       <Routes>
         <Route path="*" element={<MainPage />} />
-        <Route path="/farm/:farmId" element={<MainPage />} />
+        {/* <Route path="/farm/:farmId" element={<MainPage />} /> */}
       </Routes>
     </div>
   );
