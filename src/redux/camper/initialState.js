@@ -1,5 +1,4 @@
 export const initialState = {
-  product: [],
+  camper: [],
   isLoading: false,
-  productId: {},
 };

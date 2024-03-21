@@ -1,7 +1,15 @@
 import sprite from '../../assets/svgSprite/symbol-defs.svg';
 import img from '../../assets/img/car-1.jpg';
+import { useState } from 'react';
+import { ModalProduct } from 'components/ModalProduct';
 
 export const ProductItem = () => {
+  const [isShowModal, setIsShowModal] = useState(false);
+
+  const showMoreModal = () => {
+    setIsShowModal(true);
+  };
+
   return (
     <div className="product-item">
       <img src={img} alt="Boy with laptop" />
@@ -42,9 +50,14 @@ export const ProductItem = () => {
             <div className="btn-option-text">2 adults</div>
           </div>
         </div>
-        <div className="showmore-button">
-          <span>Show more</span>
-        </div>
+        <button
+          type="button"
+          className="showmore-button"
+          onClick={() => showMoreModal()}
+        >
+          Show more
+        </button>
+        {isShowModal && <ModalProduct onClose={() => setIsShowModal(false)} />}
       </div>
     </div>
   );

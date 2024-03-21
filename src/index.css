@@ -252,7 +252,7 @@ main {
   display: flex;
 }
 
-.showmore-button span {
+.showmore-button {
   margin: auto;
 }
 
