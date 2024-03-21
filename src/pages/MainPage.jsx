@@ -1,4 +1,6 @@
 import Container from 'components/Container';
+import { ModalProduct } from 'components/ModalProduct';
+import { ProductItem } from 'components/ProductItem';
 import { Sidebar } from 'components/Sidebar';
 import React from 'react';
 // import { Sidebar } from 'components/Sidebar';
@@ -11,7 +13,12 @@ const MainPage = () => {
       </aside>
       <main>
         <section className="main-section">
-          <div>Main Container</div>
+          {/* <div className="main-container">
+            <ProductItem />
+            <ProductItem />
+            <ProductItem />
+          </div> */}
+          <ModalProduct />
         </section>
       </main>
     </Container>

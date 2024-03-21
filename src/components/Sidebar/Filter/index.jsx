@@ -1,3 +1,5 @@
+import sprite from '../../../assets/svgSprite/symbol-defs.svg';
+
 export const Filter = () => {
   return (
     <div className="filter">
@@ -15,9 +17,36 @@ export const Filter = () => {
         </svg>
 
         <ul className="filter-group">
-          <li className="filter-item"></li>
-          <li className="filter-item"></li>
-          <li className="filter-item"></li>
+          <li className="filter-item">
+            <svg width="32" height="32" className="icon">
+              <use href={`${sprite}#icon-ac`}></use>
+            </svg>
+            <div className="filter-item-text">AC</div>
+          </li>
+          <li className="filter-item">
+            <svg width="32" height="32" className="icon">
+              <use href={`${sprite}#icon-automatic`}></use>
+            </svg>
+            <div className="filter-item-text">Automatic</div>
+          </li>
+          <li className="filter-item">
+            <svg width="32" height="32" className="icon">
+              <use href={`${sprite}#icon-kitchen`}></use>
+            </svg>
+            <div className="filter-item-text">Kitchen</div>
+          </li>
+          <li className="filter-item">
+            <svg width="32" height="32" className="icon">
+              <use href={`${sprite}#icon-tv`}></use>
+            </svg>
+            <div className="filter-item-text">TV</div>
+          </li>
+          <li className="filter-item">
+            <svg width="32" height="32" className="icon">
+              <use href={`${sprite}#icon-shower`}></use>
+            </svg>
+            <div className="filter-item-text">Kitchen</div>
+          </li>
         </ul>
       </div>
       <div className="filter-name">
@@ -33,12 +62,29 @@ export const Filter = () => {
         </svg>
 
         <ul className="filter-group">
-          <li className="filter-item"></li>
-          <li className="filter-item"></li>
-          <li className="filter-item"></li>
+          <li className="filter-item">
+            <svg width="40" height="28" className="icon">
+              <use href={`${sprite}#icon-van`}></use>
+            </svg>
+            <div className="filter-item-text">Van</div>
+          </li>
+          <li className="filter-item">
+            <svg width="40" height="28" className="icon">
+              <use href={`${sprite}#icon-fully-int`}></use>
+            </svg>
+            <div className="filter-item-text">Fully Integrated</div>
+          </li>
+          <li className="filter-item">
+            <svg width="40" height="28" className="icon">
+              <use href={`${sprite}#icon-alcove`}></use>
+            </svg>
+            <div className="filter-item-text">Alcove</div>
+          </li>
         </ul>
       </div>
-      <div className="filter-button">Filter</div>
+      <div className="filter-button">
+        <span>Filter</span>
+      </div>
     </div>
   );
 };
