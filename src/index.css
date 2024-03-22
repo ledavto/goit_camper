@@ -244,6 +244,12 @@ main {
   gap: 8px;
   padding-bottom: 24px;
 }
+.product-detail {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-bottom: 24px;
+}
 
 .product-btn-option {
   border-radius: 100px;

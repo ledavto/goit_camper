@@ -25,17 +25,8 @@ const ProductList = () => {
   return (
     <div className="main-container">
       {isLoading && <div>Loading...</div>}
-      <ProductItem />
-
-      {/*  {products.length > 0 &&
-        products.map(({ titleProd, price, _id, picture = '' }) => (
-          <ProductItem
-            name={titleProd}
-            price={price}
-            id={_id}
-            picture={picture}
-          />
-        ))} */}
+      {campers.length > 0 &&
+        campers.map(item => <ProductItem item={item} key={item._id} />)}
     </div>
   );
 };
