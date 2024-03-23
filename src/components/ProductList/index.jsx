@@ -7,11 +7,6 @@ import {
   selectCamper,
   selectCamperLoading,
 } from '../../redux/camper/selectors';
-// import { fetchProductbyFarm } from '../../redux/product/product-operations';
-// import {
-//   selectProductByFarm,
-//   selectProductLoading,
-// } from '../../redux/product/selectors';
 
 const ProductList = () => {
   const dispatch = useDispatch();

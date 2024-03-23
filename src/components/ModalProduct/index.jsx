@@ -1,3 +1,4 @@
+import { Link, Outlet } from 'react-router-dom';
 import sprite from '../../assets/svgSprite/symbol-defs.svg';
 import { useEffect } from 'react';
 
@@ -69,12 +70,13 @@ export const ModalProduct = ({ data, onClose }) => {
 
         <div className="navi-info">
           <div className="navi-features">
-            <p>Features</p>
+            <Link to="features">Features</Link>
           </div>
           <div className="navi-reviews">
-            <p>Reviews</p>
+            <Link to="reviews">Reviews</Link>
           </div>
         </div>
+        <Outlet />
       </div>
     </div>
   );

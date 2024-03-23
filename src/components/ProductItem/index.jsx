@@ -2,16 +2,37 @@ import sprite from '../../assets/svgSprite/symbol-defs.svg';
 import img from '../../assets/img/car-1.jpg';
 import { useState } from 'react';
 import { ModalProduct } from 'components/ModalProduct';
+import Notiflix from 'notiflix';
+import axios from 'axios';
 
 export const ProductItem = ({ item }) => {
   const [isShowModal, setIsShowModal] = useState(false);
+  const URL = 'https://657855f2f08799dc8044f5c2.mockapi.io';
+
+  const campersById = async id => {
+    const user = await axios.get(`${URL}/campers/${id}`);
+    console.log(user);
+    return user;
+  };
 
   const handleFavorite = event => {
     if (event.currentTarget === event.target) {
-      console.log('addFavorite');
+      const idProd = event.target.getAttribute('id');
+
+      campersById(idProd).then(elem => {
+        const favoriteList = localStorage.getItem('fav_camper_list') ?? [];
+        const parsedCart =
+          favoriteList.length > 0 ? JSON.parse(favoriteList) : [];
+        parsedCart.push(elem.data);
+        localStorage.setItem('fav_camper_list', JSON.stringify(parsedCart));
+        Notiflix.Notify.success('Product add to cart!');
+        return elem.data;
+      });
     }
   };
+
   const {
+    _id,
     name,
     price,
     location,
@@ -28,20 +49,17 @@ export const ProductItem = ({ item }) => {
 
   return (
     <div className="product-item">
-      <img src={gallery[0]} alt="Boy with laptop" width="400" />
+      <img src={gallery[0]} alt="Boy with laptop" width="290" height="310" />
       <div className="product-info">
         <div className="product-title">
           <h2 className="product-name">{name}</h2>
           <div className="product-price-cont">
             <p className="product-price">€{price}</p>
-            <svg
-              width="24"
-              height="24"
-              className="icon-heart"
-              onClick={handleFavorite}
-            >
-              <use href={`${sprite}#icon-heart`}></use>
-            </svg>
+            <div id={_id} onClick={handleFavorite}>
+              <svg width="24" height="24" className="icon-heart">
+                <use href={`${sprite}#icon-heart`}></use>
+              </svg>
+            </div>
           </div>
         </div>
         <div className="product-title-info">
