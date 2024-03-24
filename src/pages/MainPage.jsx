@@ -8,6 +8,11 @@ const MainPage = () => {
   return (
     <Container>
       <NavBar />
+      <main>
+        <section className="main-section">
+          <h1>This is BEST STORE to rent CAMPERS!</h1>
+        </section>
+      </main>
     </Container>
   );
 };

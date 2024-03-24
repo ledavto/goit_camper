@@ -356,6 +356,14 @@ main {
   display: flex;
   flex-direction: column;
   gap: 14px;
+
+  border: 1px solid rgba(16, 24, 40, 0.2);
+  border-radius: 10px;
+  padding: 24px;
+}
+
+.reviews-container {
+  width: 50%;
 }
 
 .form-book input {
