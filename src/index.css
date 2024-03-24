@@ -63,9 +63,9 @@ img {
 }
 
 aside {
-  width: 360px;
-  padding-left: 64px;
-  padding-right: 64px;
+  width: 400px;
+  /* padding-left: 64px;
+  padding-right: 64px; */
   float: left;
   font-style: italic;
   color: #29627e;
@@ -207,7 +207,7 @@ main {
   fill: none;
   margin: auto;
   position: absolute;
-  right: 100%+20px;
+  right: 87%;
   top: 45%;
   /* display: none; */
 }
@@ -379,4 +379,11 @@ main {
   padding: 18px 18px 76px 18px;
   width: 400px;
   height: 120px;
+}
+
+/* ---------------------------------------------MAIN PAGE */
+.main-section {
+  text-align: center;
+  padding-top: 30px;
+  margin: auto;
 }
