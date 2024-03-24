@@ -1,5 +1,4 @@
 import sprite from '../../assets/svgSprite/symbol-defs.svg';
-import img from '../../assets/img/car-1.jpg';
 import { useState } from 'react';
 import { ModalProduct } from 'components/ModalProduct';
 import Notiflix from 'notiflix';
@@ -11,7 +10,7 @@ export const ProductItem = ({ item }) => {
 
   const campersById = async id => {
     const user = await axios.get(`${URL}/campers/${id}`);
-    console.log(user);
+    // console.log(user);
     return user;
   };
 
@@ -25,14 +24,17 @@ export const ProductItem = ({ item }) => {
           favoriteList.length > 0 ? JSON.parse(favoriteList) : [];
         parsedCart.push(elem.data);
         localStorage.setItem('fav_camper_list', JSON.stringify(parsedCart));
-        Notiflix.Notify.success('Product add to cart!');
+        Notiflix.Notify.success('Product add to Favorite!');
+        document.getElementById(idProd);
+        console.log(idProd);
+        console.log(document.getElementById(idProd));
         return elem.data;
       });
     }
   };
 
   const {
-    _id,
+    id,
     name,
     price,
     location,
@@ -55,8 +57,15 @@ export const ProductItem = ({ item }) => {
           <h2 className="product-name">{name}</h2>
           <div className="product-price-cont">
             <p className="product-price">€{price}</p>
-            <div id={_id} onClick={handleFavorite}>
-              <svg width="24" height="24" className="icon-heart">
+
+            <div>
+              <svg
+                width="24"
+                height="24"
+                className="icon-heart"
+                onClick={handleFavorite}
+                id={id}
+              >
                 <use href={`${sprite}#icon-heart`}></use>
               </svg>
             </div>
@@ -93,13 +102,9 @@ export const ProductItem = ({ item }) => {
             </div>
           ))}
         </div>
-        <button
-          type="button"
-          className="showmore-button"
-          onClick={() => showMoreModal()}
-        >
-          Show more
-        </button>
+        <div className="showmore-button" onClick={() => showMoreModal()}>
+          <span>Show more</span>
+        </div>
         {isShowModal && (
           <ModalProduct data={item} onClose={() => setIsShowModal(false)} />
         )}

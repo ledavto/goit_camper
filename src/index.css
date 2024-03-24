@@ -155,6 +155,7 @@ main {
 
 .filter-item:hover {
   border: 1px solid var(--button);
+  cursor: pointer;
 }
 .filter-button,
 .showmore-button {
@@ -167,11 +168,14 @@ main {
   text-align: center;
   color: #fff;
 }
-.filter-button:hover {
+.filter-button:hover,
+.showmore-button:hover {
   background: #d84343;
+  cursor: pointer;
 }
 
-.filter-button span {
+.filter-button span,
+.showmore-button span {
   margin: auto;
 }
 
@@ -187,9 +191,15 @@ main {
 }
 
 .icon-heart:hover {
-  stroke: var(--button);
+  /* stroke: var(--button);
   fill: var(--button);
-  margin: auto;
+  margin: auto; */
+  cursor: pointer;
+}
+
+.heart-btn {
+  width: 32px;
+  height: 32px;
 }
 
 .icon-input {
@@ -336,4 +346,29 @@ main {
 .navi-reviews:hover,
 .navi-features:hover {
   cursor: pointer;
+}
+
+.section-reviews {
+  display: flex;
+}
+
+.form-book {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.form-book input {
+  border-radius: 10px;
+  padding: 18px;
+  width: 400px;
+  height: 56px;
+  background: var(--inputs);
+}
+
+.form-book textarea {
+  border-radius: 10px;
+  padding: 18px 18px 76px 18px;
+  width: 400px;
+  height: 120px;
 }

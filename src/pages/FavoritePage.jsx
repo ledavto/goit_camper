@@ -1,15 +1,21 @@
 import Container from 'components/Container';
-import { ModalProduct } from 'components/ModalProduct';
+import FavoriteList from 'components/FavoriteList';
 import { NavBar } from 'components/NavBar';
-import ProductList from 'components/ProductList';
 import { Sidebar } from 'components/Sidebar';
 import React from 'react';
-// import { Sidebar } from 'components/Sidebar';
 
 const FavoritePage = () => {
   return (
     <Container>
       <NavBar />
+      <aside className="sidebar-section">
+        <Sidebar />
+      </aside>
+      <main>
+        <section className="main-section">
+          <FavoriteList />
+        </section>
+      </main>
     </Container>
   );
 };

@@ -21,7 +21,7 @@ const ProductList = () => {
     <div className="main-container">
       {isLoading && <div>Loading...</div>}
       {campers.length > 0 &&
-        campers.map(item => <ProductItem item={item} key={item._id} />)}
+        campers.map(item => <ProductItem item={item} key={item.id} />)}
     </div>
   );
 };
