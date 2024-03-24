@@ -15,6 +15,7 @@ export const App = () => {
           <Route path="features" element={<Features />} />
         </Route>
         <Route path="/favorites" element={<FavoritePage />} />
+        <Route path="*" element={<MainPage />} />
       </Routes>
     </>
   );

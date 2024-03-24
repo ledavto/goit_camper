@@ -6,7 +6,7 @@ const Reviews = () => {
   // const reviews = useSelector(selectReviews);
   return (
     <div className="section-reviews">
-      <div className="reviews-container">Reviews</div>
+      <div className="reviews-container">Reviews list</div>
 
       <FormBook />
     </div>

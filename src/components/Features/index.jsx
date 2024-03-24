@@ -3,7 +3,7 @@ import FormBook from 'components/FormBook';
 const Features = () => {
   return (
     <div className="section-reviews">
-      <div className="reviews-container">Reviews</div>
+      <div className="reviews-container">Features list</div>
 
       <FormBook />
     </div>
