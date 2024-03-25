@@ -76,7 +76,7 @@ aside {
 }
 
 main {
-  margin-left: 488px; /* Same as the width of the sidenav */
+  margin-left: 444px; /* Same as the width of the sidenav */
   padding: 0px 10px;
   width: auto;
 }
@@ -190,6 +190,12 @@ main {
   margin: auto;
 }
 
+.in-favorite {
+  stroke: var(--button);
+  fill: var(--button);
+  margin: auto;
+}
+
 .icon-heart:hover {
   /* stroke: var(--button);
   fill: var(--button);
@@ -197,10 +203,10 @@ main {
   cursor: pointer;
 }
 
-.heart-btn {
+/* .heart-btn {
   width: 32px;
   height: 32px;
-}
+} */
 
 .icon-input {
   stroke: #101828;

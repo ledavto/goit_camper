@@ -22,12 +22,20 @@ export const ProductItem = ({ item }) => {
         const favoriteList = localStorage.getItem('fav_camper_list') ?? [];
         const parsedCart =
           favoriteList.length > 0 ? JSON.parse(favoriteList) : [];
-        parsedCart.push(elem.data);
+
+        if (parsedCart.findIndex(({ id }) => id === idProd) !== -1) {
+          parsedCart.splice(
+            parsedCart.findIndex(({ id }) => id === idProd),
+            1
+          );
+          Notiflix.Notify.success('Product DELETE from Favorite!');
+        } else {
+          parsedCart.push(elem.data);
+          Notiflix.Notify.success('Product add to Favorite!');
+        }
         localStorage.setItem('fav_camper_list', JSON.stringify(parsedCart));
-        Notiflix.Notify.success('Product add to Favorite!');
-        document.getElementById(idProd);
-        console.log(idProd);
-        console.log(document.getElementById(idProd));
+
+        document.getElementById(idProd).classList.toggle('in-favorite');
         return elem.data;
       });
     }
@@ -49,9 +57,18 @@ export const ProductItem = ({ item }) => {
     setIsShowModal(true);
   };
 
+  const isInLocal = idCard => {
+    const favoriteList = localStorage.getItem('fav_camper_list') ?? [];
+    const parsedCart = favoriteList.length > 0 ? JSON.parse(favoriteList) : [];
+
+    const findInLocal = parsedCart.findIndex(({ id }) => id === idCard);
+
+    return findInLocal !== -1 ? true : false;
+  };
+
   return (
     <div className="product-item">
-      <img src={gallery[0]} alt="Boy with laptop" width="290" height="310" />
+      <img src={gallery[0]} alt="Boy with laptop" height="200" />
       <div className="product-info">
         <div className="product-title">
           <h2 className="product-name">{name}</h2>
@@ -62,7 +79,9 @@ export const ProductItem = ({ item }) => {
               <svg
                 width="24"
                 height="24"
-                className="icon-heart"
+                className={
+                  isInLocal(id) ? 'icon-heart in-favorite' : 'icon-heart'
+                }
                 onClick={handleFavorite}
                 id={id}
               >
